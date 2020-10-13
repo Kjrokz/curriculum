@@ -1,0 +1,29 @@
+.menu {
+  position: relative;
+  z-index: 10;
+  ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-right: 20px;
+      padding: 30px;
+      font-weight: bold;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: white;
+        transition: 0.3s ease-in;
+        &:hover {
+          color: cadetblue;
+          text-decoration: none;
+          transition: 0.3s ease-out;
+        }
+      }
+    }
+  }
+}
