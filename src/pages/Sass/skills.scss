@@ -1,0 +1,11 @@
+.skills {
+  .titulo {
+    margin-top: 50px;
+    > h2 {
+      margin-bottom: 20px;
+    }
+    &:last-of-type {
+      margin-bottom: 50px;
+    }
+  }
+}

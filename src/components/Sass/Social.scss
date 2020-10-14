@@ -1,0 +1,17 @@
+.social {
+  padding: 25px 0;
+  background-color: royalblue;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  svg {
+    width: 20px;
+    height: 20px;
+    transition: 0.3s ease-in;
+    margin-right: 20px;
+    &:hover {
+      transition: 0.3s ease-out;
+      fill: whitesmoke;
+    }
+  }
+}

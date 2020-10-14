@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap"
 
 import { Link } from "gatsby"
 
-import "../components/Menu.scss"
+import "./Sass/Menu.scss"
 
 export interface MenuProps {
   colorMenu?: string

@@ -1,0 +1,14 @@
+.lista-skills {
+  .skillbar {
+    @media (min-width: 1280px) {
+      width: 48%;
+      display: inline-block;
+      margin-right: 20px;
+
+      &:nth-child(2n) {
+        margin-left: 20px;
+        margin-right: 0;
+      }
+    }
+  }
+}

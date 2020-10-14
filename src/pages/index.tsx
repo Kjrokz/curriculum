@@ -1,15 +1,16 @@
 import React from "react"
 
-import "../pages/index.scss"
+import "./Sass/index.scss"
 import LayoutPrincipal from "../layouts/LayoutPrincipal"
 import Perfil from "../components/Perfil"
+import SobreMi from "../components/SobreMi"
 
-const IndexPage = () => {
+const IndexPage = (): JSX.Element => {
   return (
     <>
       <LayoutPrincipal colorMenu="transparent">
         <Perfil />
-        <h1>1</h1>
+        <SobreMi />
       </LayoutPrincipal>
     </>
   )

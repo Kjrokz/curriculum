@@ -1,0 +1,71 @@
+.perfil {
+  position: relative;
+  top: -84px;
+  width: 100%;
+  z-index: 0;
+  .pantallaFondo {
+    background-image: url("../../images//code.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+  }
+  .opacidad {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    opacity: 0.7;
+  }
+
+  .contenedor {
+    margin-top: -400px;
+    position: relative;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+
+    .informacion {
+      padding: 50px;
+
+      &__perfil {
+        > span {
+          font-weight: bold;
+          background-color: royalblue;
+          color: white;
+          padding: 5px 10px;
+          border-radius: 10px;
+          text-transform: uppercase;
+        }
+        > p:first-of-type {
+          margin: 10px 0 0 0;
+          font-size: 40px;
+          font-weight: 600;
+        }
+      }
+      .mas-informacion {
+        .item {
+          display: flex;
+
+          p {
+            &:first-of-type {
+              width: 25%;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+            &:last-of-type {
+              width: 75%;
+              font-weight: bold;
+              color: #a2a2a2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
