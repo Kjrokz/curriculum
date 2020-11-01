@@ -42,6 +42,9 @@
 
     .informacion {
       padding: 50px;
+      img {
+        border-radius: 20px;
+      }
 
       &__perfil {
         > span {
