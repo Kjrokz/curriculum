@@ -1,9 +1,14 @@
 .social {
   padding: 25px 0;
-  background-color: royalblue;
+  background-color: #3182ce;
   justify-content: center;
   align-items: center;
   display: flex;
+  transition: 0.3s ease-in;
+  &:hover {
+    background-color: #4299e1;
+    transition: 0.3s ease-out;
+  }
   svg {
     width: 20px;
     height: 20px;

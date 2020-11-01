@@ -30,7 +30,7 @@ const Profile: React.SFC<ProfileProps> = (): JSX.Element => {
           </Col>
           <Col xs={12} md={8} className="informacion__perfil">
             <span>Hola</span>
-            <p>Nombre</p>
+            <p>Eric Herrera Herrera</p>
             <p>2</p>
             <hr />
             <div className="mas-informacion">

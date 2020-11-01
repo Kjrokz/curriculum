@@ -4,11 +4,13 @@ import { Container, Row, Col, Button, Card } from "react-bootstrap"
 import "./Sass/proyectos.scss"
 import proyectos from "../utils/proyectos"
 
-export interface ProyectosProps {}
 
-const Proyectos: React.SFC<ProyectosProps> = () => {
+
+const Proyectos: React.SFC = ({uri}) => {
+  
+  
   return (
-    <LayoutPrincipal colorMenu="black">
+    <LayoutPrincipal colorMenu="#44337a" uri={uri}>
       <Container className="proyectos">
         <h1>Proyectos</h1>
 

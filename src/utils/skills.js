@@ -2,7 +2,7 @@ export const frontEndSkills = [
   { type: "Javascript", level: 75 },
   { type: "React.js", level: 75 },
   { type: "Next.js", level: 75 },
- /*  { type: "Gatsby.js", level: 75 }, */
+  /*  { type: "Gatsby.js", level: 75 }, */
   { type: "Html", level: 75 },
   { type: "Css3", level: 75 },
   { type: "Gatsby.js", level: 75 },
@@ -40,9 +40,9 @@ export const sistemasOperativosSkills = [
 ]
 
 export const sistemasOperativosColors = {
-  bar: "#3498db",
+  bar: "#9f7aea",
   title: {
-    background: "#2980b9",
+    background: "#6b46c1",
     text: "white",
   },
 }

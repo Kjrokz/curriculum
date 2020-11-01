@@ -1,31 +1,35 @@
 import React from "react"
 
-import { Container } from "react-bootstrap"
+import { Container, Button } from "react-bootstrap"
 
-import { Link } from "gatsby"
+import { Link} from "gatsby"
 
 import "./Sass/Menu.scss"
 
+import { ReactComponent as Responsive } from "../images/icons/responsive.svg"
+
+import Links from '../components/Links'
+
 export interface MenuProps {
   colorMenu?: string
+  uri?:string
+  setSidebar:React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Menu: React.SFC<MenuProps> = ({ colorMenu }) => {
+const Menu: React.SFC<MenuProps> = ({ colorMenu,uri,setSidebar }) => {
+
+const pagina = uri.replace('/',"");  
+  
   return (
     <header className="menu" style={{ backgroundColor: colorMenu }}>
       <Container>
-        <ul>
-          <li>
-            <Link to="/">Inicio</Link>
-          </li>
-          <li>
-            <Link to="/skills">Skills</Link>
-          </li>
-          <li>
-            <Link to="/proyectos">Proyectos</Link>
-          </li>
-        </ul>
+        <Links/>
+      <h1>{uri === "/" ? 'Inicio': pagina}</h1>
       </Container>
+      <button onClick={()=>{setSidebar(true);
+      }}>
+        <Responsive className="icon" />
+      </button>
     </header>
   )
 }

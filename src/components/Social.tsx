@@ -3,6 +3,7 @@ import React from "react"
 import "./Sass/Social.scss"
 
 import { ReactComponent as Slinkedin } from "../images/icons/linkedin.svg"
+import {ReactComponent as SGithub} from '../images/icons/github.svg'
 
 export interface SocialProps {}
 
@@ -12,7 +13,7 @@ const socialMedia = [
     link: "https://google.cl",
   },
   {
-    social: <Slinkedin />,
+    social: <SGithub />,
     link: "https://google.cl",
   },
 ]

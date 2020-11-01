@@ -1,11 +1,15 @@
 import React from "react"
-import SkillBar, { SkillBarSkill } from "react-skillbars"
+import { SkillBarSkill } from "react-skillbars"
 import "./Sass/ListarSkills.scss"
+
+import Loadable from '@loadable/component'
 
 export interface ListarSkillsProps {
   skills: SkillBarSkill[]
   colors: any
 }
+
+const SkillBar = Loadable(()=>(import('react-skillbars')))
 
 const ListarSkills: React.SFC<ListarSkillsProps> = ({ skills, colors }) => {
   return (

@@ -12,8 +12,6 @@ import {
   sistemasOperativosColors,
 } from "../utils/skills"
 
-export interface SkillsProps {}
-
 const skills = [
   {
     titulo: "Frontend",
@@ -32,9 +30,9 @@ const skills = [
   },
 ]
 
-const Skills: React.SFC<SkillsProps> = () => {
+const Skills: React.SFC = ({uri}) => {
   return (
-    <LayoutPrincipal colorMenu="black">
+    <LayoutPrincipal colorMenu="#2a4365" uri={uri}>
       <Container className="skills">
         {skills.map((item, index) => (
           <div className="titulo" key={index}>

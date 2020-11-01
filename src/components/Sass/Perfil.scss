@@ -21,6 +21,16 @@
     opacity: 0.7;
   }
 
+  @media (max-width: 575px) {
+    .contenedor {
+      margin-top: -510px !important;
+      span {
+        display: inline-block;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
   .contenedor {
     margin-top: -400px;
     position: relative;
@@ -36,7 +46,7 @@
       &__perfil {
         > span {
           font-weight: bold;
-          background-color: royalblue;
+          background-color: #3182ce;
           color: white;
           padding: 5px 10px;
           border-radius: 10px;
