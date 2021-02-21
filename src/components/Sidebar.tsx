@@ -15,7 +15,7 @@ export interface SidebarProps {
     uri:string
 }
 
-const Sidebar: React.SFC<SidebarProps> = ({ setSidebar,uri }) => {
+const Sidebar: React.FC<SidebarProps> = ({ setSidebar,uri }) => {
     const link = uri.replace('/','')
 
     

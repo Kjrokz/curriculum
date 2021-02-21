@@ -4,20 +4,23 @@ import "./Sass/Perfil.scss"
 
 import { Container, Col, Row, Image } from "react-bootstrap"
 
-import fotoPerfil from "../images/code.jpg"
+/* import fotoPerfil from "../images/code.jpg" */
 
 import Social from "../components/Social"
 
 export interface ProfileProps {}
 
 const data = [
-  { titulo: "Email", info: "----@----" },
-  { titulo: "Edad", info: "------" },
-  { titulo: "Teléfono", info: "------" },
-  { titulo: "Dirección", info: "-------" },
+  { titulo: "Email", info: "Eric2_15@hotmail.com" },
+  { titulo: "Rut", info: "18.411.148-9" },
+  { titulo: "Teléfono", info: "+56983536187" },
+  {
+    titulo: "Dirección",
+    info: "Carlos Pratt, #332, Villa Portal del Valle, Arauco",
+  },
 ]
 
-const Profile: React.SFC<ProfileProps> = (): JSX.Element => {
+const Profile: React.FC<ProfileProps> = (): JSX.Element => {
   return (
     <div className="perfil">
       <div className="pantallaFondo" />
@@ -26,12 +29,12 @@ const Profile: React.SFC<ProfileProps> = (): JSX.Element => {
       <Container className="contenedor">
         <Row className="informacion">
           <Col xs={12} md={4}>
-            <Image src={fotoPerfil} fluid />
+            <Image src={require("../images/code.jpg")} fluid />
           </Col>
           <Col xs={12} md={8} className="informacion__perfil">
             <span>Hola</span>
             <p>Eric Herrera Herrera</p>
-            <p>2</p>
+            <p>Ingeniero Civil Informático</p>
             <hr />
             <div className="mas-informacion">
               {data.map((item, index) => (

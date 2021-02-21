@@ -1,6 +1,6 @@
 import React from "react"
 
-import CV from "../images/cv.pdf"
+/* import CV from "../images/cv.pdf" */
 
 import { Container, Button } from "react-bootstrap"
 
@@ -8,7 +8,7 @@ import "./Sass/SobreMi.scss"
 
 export interface SobreMiProps {}
 
-const SobreMi: React.SFC<SobreMiProps> = () => {
+const SobreMi: React.FC<SobreMiProps> = () => {
   return (
     <>
       <Container className="sobre-mi">
@@ -51,7 +51,7 @@ const SobreMi: React.SFC<SobreMiProps> = () => {
         {/* <div>
           <Button>Descargar CV</Button>
         </div> */}
-        <a href={CV} target="_blank">
+        <a href={require("../images/cv.pdf")} target="_blank">
           <Button>Descargar CV</Button>
         </a>
       </Container>
