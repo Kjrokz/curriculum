@@ -16,7 +16,7 @@ export interface MenuProps {
   setSidebar:React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Menu: React.SFC<MenuProps> = ({ colorMenu,uri,setSidebar }) => {
+const Menu: React.FC<MenuProps> = ({ colorMenu,uri,setSidebar }) => {
 
 const pagina = uri.replace('/',"");  
   

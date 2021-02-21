@@ -5,7 +5,7 @@ export interface LinksProps {
     
 }
  
-const Links: React.SFC<LinksProps> = () => {
+const Links: React.FC<LinksProps> = () => {
     return ( <><ul>
         <li>
           <Link to="/" activeClassName="pagina-actual">Inicio</Link>

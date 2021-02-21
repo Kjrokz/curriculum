@@ -6,9 +6,9 @@ import { Container, Col, Row, Image } from "react-bootstrap"
 
 /* import fotoPerfil from "../images/code.jpg" */
 
-import Social from "../components/Social"
+import { motion } from "framer-motion"
 
-export interface ProfileProps {}
+import Social from "../components/Social"
 
 const data = [
   { titulo: "Email", info: "Eric2_15@hotmail.com" },
@@ -20,7 +20,18 @@ const data = [
   },
 ]
 
-const Profile: React.FC<ProfileProps> = (): JSX.Element => {
+const initial = {
+  scale: 0.8,
+  opacity: 0,
+}
+
+const animate = {
+  scale: 1,
+  opacity: 1,
+  transition: { delay: 0.4 },
+}
+
+const Profile: React.FC = (): JSX.Element => {
   return (
     <div className="perfil">
       <div className="pantallaFondo" />
@@ -32,10 +43,22 @@ const Profile: React.FC<ProfileProps> = (): JSX.Element => {
             <Image src={require("../images/code.jpg")} fluid />
           </Col>
           <Col xs={12} md={8} className="informacion__perfil">
-            <span>Hola</span>
-            <p>Eric Herrera Herrera</p>
-            <p>Ingeniero Civil Informático</p>
-            <hr />
+            <motion.div
+              initial="initial"
+              animate="animate"
+              variants={{
+                initial,
+                animate,
+              }}
+              className="animacion"
+            >
+              <div className="span">
+                <span>Hola</span>
+              </div>
+              <p>Eric Herrera Herrera</p>
+              <p>Ingeniero Civil Informático</p>
+              <hr />
+            </motion.div>
             <div className="mas-informacion">
               {data.map((item, index) => (
                 <div className="item" key={index}>

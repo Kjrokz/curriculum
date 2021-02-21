@@ -4,33 +4,42 @@ import { Container } from "react-bootstrap"
 import "./Sass/skills.scss"
 import ListarSkills from "../components/ListarSkills"
 import {
+  controlVersionesColors,
+  controlVersionesSkills,
+  basesDeDatosColors,
+  basesDeDatosSkills,
+} from "../utils/skills"
+import {
   frontEndSkills,
   frontEndSkillsColors,
   backendSkills,
   backendSkillsColors,
-  sistemasOperativosSkills,
-  sistemasOperativosColors,
 } from "../utils/skills"
 
 const skills = [
   {
-    titulo: "Frontend",
+    titulo: "Front-end",
     colors: frontEndSkillsColors,
     skillsAll: frontEndSkills,
   },
   {
-    titulo: "Backend",
+    titulo: "Back-end",
     colors: backendSkillsColors,
     skillsAll: backendSkills,
   },
   {
-    titulo: "Sistemas operativos",
-    colors: sistemasOperativosColors,
-    skillsAll: sistemasOperativosSkills,
+    titulo: "Bases de datos (SQL - NoSQL)",
+    colors: basesDeDatosColors,
+    skillsAll: basesDeDatosSkills,
+  },
+  {
+    titulo: "Control de versiones",
+    colors: controlVersionesColors,
+    skillsAll: controlVersionesSkills,
   },
 ]
 
-const Skills: React.SFC = ({uri}) => {
+const Skills: React.FC = ({ uri }) => {
   return (
     <LayoutPrincipal colorMenu="#2a4365" uri={uri}>
       <Container className="skills">

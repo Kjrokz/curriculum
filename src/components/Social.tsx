@@ -18,7 +18,7 @@ const socialMedia = [
   },
 ]
 
-const Social: React.SFC<SocialProps> = () => {
+const Social: React.FC<SocialProps> = () => {
   return (
     <>
       <div className="social">

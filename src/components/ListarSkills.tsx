@@ -11,7 +11,7 @@ export interface ListarSkillsProps {
 
 const SkillBar = Loadable(()=>(import('react-skillbars')))
 
-const ListarSkills: React.SFC<ListarSkillsProps> = ({ skills, colors }) => {
+const ListarSkills: React.FC<ListarSkillsProps> = ({ skills, colors }) => {
   return (
     <div className="lista-skills">
       <SkillBar

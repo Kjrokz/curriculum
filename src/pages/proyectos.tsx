@@ -4,11 +4,9 @@ import { Container, Row, Col, Button, Card } from "react-bootstrap"
 import "./Sass/proyectos.scss"
 import proyectos from "../utils/proyectos"
 
+import { motion } from "framer-motion"
 
-
-const Proyectos: React.SFC = ({uri}) => {
-  
-  
+const Proyectos: React.FC = ({ uri }) => {
   return (
     <LayoutPrincipal colorMenu="#44337a" uri={uri}>
       <Container className="proyectos">
@@ -18,10 +16,23 @@ const Proyectos: React.SFC = ({uri}) => {
           {proyectos.map((proyecto, index) => (
             <Col key={index} xs={12} sm={4} className="proyecto">
               <Card>
-                <div
-                  className="imagen"
-                  style={{ backgroundImage: `url(${proyecto.imagen})` }}
-                />
+                <motion.div
+                  key={index}
+                  whileHover={{
+                    position: "relative",
+                    zIndex: 1,
+                    background: "white",
+                    scale: 1.1,
+                    transition: {
+                      duration: 0.4,
+                    },
+                  }}
+                >
+                  <div
+                    className="imagen"
+                    style={{ backgroundImage: `url(${proyecto.imagen})` }}
+                  />
+                </motion.div>
                 <Card.Body>
                   <Card.Title>{proyecto.titulo}</Card.Title>
                   <Card.Text>{proyecto.descripcion}</Card.Text>

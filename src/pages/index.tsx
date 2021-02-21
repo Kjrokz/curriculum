@@ -5,7 +5,7 @@ import LayoutPrincipal from "../layouts/LayoutPrincipal"
 import Perfil from "../components/Perfil"
 import SobreMi from "../components/SobreMi"
 
-const IndexPage = ({uri}): JSX.Element => {
+const IndexPage:React.FC = ({uri}): JSX.Element => {
  
   
   return (
