@@ -1,34 +1,41 @@
-import React from 'react';
+import React from "react"
 
-import './Sass/Sidebar.scss'
+import "./Sass/Sidebar.scss"
 
-import Links from './Links';
+import Links from "./Links"
 
-import Social from '../components/Social'
+import Social from "../components/Social"
 
-import {ReactComponent as Cerrar} from '../images/icons/cerrar.svg'
-
-
+/* import {ReactComponent as Cerrar} from '../images/icons/cerrar.svg' */
+import { BiX } from "react-icons/bi"
 
 export interface SidebarProps {
-    setSidebar: React.Dispatch<React.SetStateAction<boolean>>
-    uri:string
+  setSidebar: React.Dispatch<React.SetStateAction<boolean>>
+  uri: string
+  sidebar: boolean
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ setSidebar,uri }) => {
-    const link = uri.replace('/','')
+const Sidebar: React.FC<SidebarProps> = ({ setSidebar, uri, sidebar }) => {
+  const link = uri.replace("/", "")
 
-    
-
-    return (
-    <aside className="sidebar">
-        <div className="boton">
-        <button onClick={() => { setSidebar(false) }}><Cerrar/></button></div>
-        <div className="links">
-            <Links/>
-            <Social/>
-        </div>
-        </aside>);
+  return (
+    <aside className={`sidebar ${!sidebar ? "off" : ""}`}>
+      <div className="boton">
+        <button
+          onClick={() => {
+            setSidebar(false)
+          }}
+        >
+          {/*   <Cerrar /> */}
+          <BiX size={30} fill="white" />
+        </button>
+      </div>
+      <div className="links">
+        <Links />
+        <Social />
+      </div>
+    </aside>
+  )
 }
 
-export default Sidebar;
+export default Sidebar

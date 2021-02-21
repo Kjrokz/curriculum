@@ -19,28 +19,24 @@ const LayoutPrincipal: React.FC<LayoutPrincipalProps> = ({
   const [sidebar, setSidebar] = useState<boolean>(false)
 
   return (
-    <>
-      {sidebar ? (
-        <Sidebar setSidebar={setSidebar} uri={uri} />
-      ) : (
-        <>
-          <Menu
-            colorMenu={colorMenu}
-            uri={uri}
-            sidebar={sidebar}
-            setSidebar={setSidebar}
-          />
-          <motion.div
-            initial="initial"
-            animate="animate"
-            transition={{ delay: 0.1 }}
-            variants={{ initial: { opacity: 0 }, animate: { opacity: 2 } }}
-          >
-            <main>{children}</main>
-          </motion.div>
-        </>
-      )}
-    </>
+    <div>
+      <Sidebar setSidebar={setSidebar} uri={uri} sidebar={sidebar} />
+
+      <Menu
+        colorMenu={colorMenu}
+        uri={uri}
+        sidebar={sidebar}
+        setSidebar={setSidebar}
+      />
+      <motion.div
+        initial="initial"
+        animate="animate"
+        transition={{ delay: 0.1 }}
+        variants={{ initial: { opacity: 0 }, animate: { opacity: 2 } }}
+      >
+        <main>{children}</main>
+      </motion.div>
+    </div>
   )
 }
 
