@@ -6,7 +6,8 @@ import proyectos from "../utils/proyectos"
 
 import { motion } from "framer-motion"
 
-const Proyectos: React.FC = ({ uri }) => {
+const Proyectos: React.FC = props => {
+  const { uri }: any = props
   return (
     <LayoutPrincipal colorMenu="#44337a" uri={uri}>
       <Container className="proyectos">

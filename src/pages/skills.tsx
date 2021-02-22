@@ -39,7 +39,8 @@ const skills = [
   },
 ]
 
-const Skills: React.FC = ({ uri }) => {
+const Skills: React.FC = props => {
+  const { uri }: any = props
   return (
     <LayoutPrincipal colorMenu="#2a4365" uri={uri}>
       <Container className="skills">

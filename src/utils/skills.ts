@@ -4,7 +4,7 @@ export const frontEndSkills = [
   { type: "Next.js", level: 80 },
   /*  { type: "Gatsby.js", level: 75 }, */
   { type: "HTML", level: 80 },
-  { type: "CSS3", level: 80 },
+  { type: "CSS3/SCSS", level: 80 },
   { type: "Gatsby.js", level: 80 },
 ]
 

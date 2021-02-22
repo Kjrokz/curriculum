@@ -11,13 +11,10 @@ import { BiX } from "react-icons/bi"
 
 export interface SidebarProps {
   setSidebar: React.Dispatch<React.SetStateAction<boolean>>
-  uri: string
   sidebar: boolean
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ setSidebar, uri, sidebar }) => {
-  const link = uri.replace("/", "")
-
+const Sidebar: React.FC<SidebarProps> = ({ setSidebar, sidebar }) => {
   return (
     <aside className={`sidebar ${!sidebar ? "off" : ""}`}>
       <div className="boton">

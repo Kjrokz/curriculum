@@ -5,9 +5,8 @@ import LayoutPrincipal from "../layouts/LayoutPrincipal"
 import Perfil from "../components/Perfil"
 import SobreMi from "../components/SobreMi"
 
-const IndexPage:React.FC = ({uri}): JSX.Element => {
- 
-  
+const IndexPage: React.FC = (props): JSX.Element => {
+  const { uri }: any = props
   return (
     <>
       <LayoutPrincipal colorMenu="transparent" uri={uri}>

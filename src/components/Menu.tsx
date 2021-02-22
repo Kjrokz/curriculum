@@ -13,7 +13,7 @@ import Links from "../components/Links"
 
 export interface MenuProps {
   colorMenu?: string
-  uri?: string
+  uri: string
   setSidebar: React.Dispatch<React.SetStateAction<boolean>>
 }
 

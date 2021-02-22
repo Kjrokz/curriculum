@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 
 export interface LayoutPrincipalProps {
   colorMenu?: string
-  uri?: string
+  uri: string
 }
 
 const LayoutPrincipal: React.FC<LayoutPrincipalProps> = ({
@@ -20,14 +20,9 @@ const LayoutPrincipal: React.FC<LayoutPrincipalProps> = ({
 
   return (
     <div>
-      <Sidebar setSidebar={setSidebar} uri={uri} sidebar={sidebar} />
+      <Sidebar setSidebar={setSidebar} sidebar={sidebar} />
 
-      <Menu
-        colorMenu={colorMenu}
-        uri={uri}
-        sidebar={sidebar}
-        setSidebar={setSidebar}
-      />
+      <Menu colorMenu={colorMenu} setSidebar={setSidebar} uri={uri} />
       <motion.div
         initial="initial"
         animate="animate"
